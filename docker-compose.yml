@@ -153,3 +153,25 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${TRAEFIK_ACME_FILE}:/acme.json
+      
+  xteve:
+    image: bl0m1/xteve
+    container_name: xteve
+    restart: unless-stopped
+    expose:
+      - 34400
+    ports:
+      - 34400:34400
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIME_ZONE}
+    volumes:
+      - ${XTEVE_CONFIG_PATH}:/config
+      - ${TV_SHOWS_PATH}:/tv
+      - ${MOVIES_PATH}:/movies
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:${XTEVE_DOMAIN_NAME}
+      - traefik.port=34400
+      - traefik.frontend.auth.basic=${BASIC_AUTH}

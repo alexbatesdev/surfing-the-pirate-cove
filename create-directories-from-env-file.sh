@@ -39,6 +39,7 @@ create_directory $(sed -rn 's/(PLEX_MEDIA_PATH)=.*/\1/p' .env) $(sed -rn 's/PLEX
 create_directory $(sed -rn 's/(PLEX_TRANSCODE_PATH)=.*/\1/p' .env) $(sed -rn 's/PLEX_TRANSCODE_PATH=(.*)/\1/p' .env)
 create_directory $(sed -rn 's/(PLEX_LOGS_PATH)=.*/\1/p' .env) $(sed -rn 's/PLEX_LOGS_PATH=(.*)/\1/p' .env)
 create_directory $(sed -rn 's/(TAUTULLI_CONFIG_PATH)=.*/\1/p' .env) $(sed -rn 's/TAUTULLI_CONFIG_PATH=(.*)/\1/p' .env)
+create_directory $(sed -rn 's/(XTEVE_CONFIG_PATH)=.*/\1/p' .env) $(sed -rn 's/XTEVE_CONFIG_PATH=(.*)/\1/p' .env)
 echo
 
 echo "${BOLD}Setting up the Traefik acme file..${NORMAL}"
