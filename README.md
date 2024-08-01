@@ -1,3 +1,7 @@
+I Sporked this repo!
+
+Oh wait I mean forked
+
 # The Pirate Cove
 Welcome to the Pirate Cove.  
 This is a complete container setup with the following software.
@@ -198,7 +202,7 @@ Not much here either. The service will not be up before your Plex server is runn
 The dashboard will be available on `https://traefik.example.org`  
 All Traefik configuration is handled in the `docker-compose.yml` file.
 
-## Licens
+## License
 ```
 --------------------------------------------------------------------------------
  THE BEER-WARE LICENSE (Revision 42):
