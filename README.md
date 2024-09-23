@@ -137,7 +137,7 @@ If you haven't figured it out yet, this setup comes with a reverse proxy, Traefi
  - traefik.example.org
 
 Traefik will get certificates for the provided domain names.  
-At the bottom of the `.env` file you will find the the `STAGING_ENVIRONMENT` variable. As long as you are testing the setup, keep this variable, it will trigger the staging environment at Lets Encrypt. If you keep tesing on production you will hit the rate limit and get temprary banned. When you are ready for production, just uncomment the line. `acme.json` is the file where Traefik keeps all its certificates. Should you choose to create the `acme.json`file your self, remember to `chmod` it `600`.
+At the bottom of the `.env` file you will find the the `STAGING_ENVIRONMENT` variable. As long as you are testing the setup, keep this variable, it will trigger the staging environment at Lets Encrypt. If you keep testing on production you will hit the rate limit and get temporarily banned. When you are ready for production, just uncomment the line. `acme.json` is the file where Traefik keeps all its certificates. Should you choose to create the `acme.json`file your self, remember to `chmod` it `600`.
 
 If your running into issues with Traefik, change the `LOG_LEVEL` to `debug` to get more detailed logs.
 
